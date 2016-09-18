@@ -5,21 +5,26 @@ module.exports = {
         'main': "./index.js",
     },
     output: {
-        path: __dirname + "/webpack_assets",
+        path: __dirname + "/build",
         filename: "bundle.js"
     },
     presets: ['es2015'],
-    module:{
+    module: {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ["style", "css",'sass']
+                loaders: ["style", "css", 'sass']
             },
             {
                 test: /\.js$/,
                 loader: "babel",
                 exclude: /(node_modules)/,
                 query: {presets: ['es2015']}
+            },
+            {
+                test: /\.jsx?/,
+                include: __dirname + "/src",
+                loader: 'babel'
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,

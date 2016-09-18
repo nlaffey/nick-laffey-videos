@@ -3,6 +3,11 @@ body {
   background-color: white;
 }
 
+a{
+  color:black;
+  text-decoration:none;
+}
+
 .letitdie.wrapper, .midtown.wrapper {
   display: none;
 }
@@ -40,13 +45,10 @@ body {
 
 .vidtitle {
   font-size: 85px;
-  text-align: center;
   z-index: 14;
-  position: absolute;
+  position: relative;
   color: white;
   display: none;
-  margin-top: 320px;
-  margin-left: 15px;
   cursor: pointer;
   text-decoration: none;
   text-shadow: 2px 2px #000000;
@@ -196,4 +198,11 @@ a.wrapper {
   top: 105px;
   left: 320px;
   position: absolute;
+}
+
+.vidtitle-wrapper {
+  position: absolute;
+  top: 300px;
+  text-align: center;
+  width:100%;
 }

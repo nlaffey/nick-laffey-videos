@@ -12,7 +12,7 @@ export default function () {
         let letItDiePlay = new PlayElement('LET IT DIE');
         let midTownPlay = new PlayElement('MIDTOWN GREENWAY');
         let nickWrapper = $('.wrapper.nick');
-        let letItDieWrapper = $('.wrapper.letitdie');
+        let letItDieWrapper = $('.wrapper.letitdie.js');
         let midtownWrapper = $('.wrapper.midtown');
         const fadeInMs = 2000;
 
@@ -22,10 +22,10 @@ export default function () {
             $('.wrapper').not('.midtown').hide();
         });
 
-        $('.letitdie.link').click(function () {
-            $('.letitdie.vidtitle').html(letItDiePlay.el).fadeIn(fadeInMs);
+        $('.letitdie.js.link').click(function () {
+            $('.letitdie.js.vidtitle').html(letItDiePlay.el).fadeIn(fadeInMs);
             letItDieWrapper.show();
-            $('.wrapper').not('.letitdie').hide();
+            $('.wrapper').not('.letitdie.js').hide();
         });
 
         $('.title').click(function () {
