@@ -22,7 +22,7 @@ class App extends React.Component {
         return <FadeIn>
             <div className="container">
                 <div className="border">
-                    <div>{React.cloneElement(this.props.children, {updateVideoInfo: this.updateVideoInfo.bind(this)})}</div>
+                    {React.cloneElement(this.props.children, {updateVideoInfo: this.updateVideoInfo.bind(this)})}
                     <Navigation videoData={this.state.videoData}/>
                 </div>
             </div>
