@@ -1,6 +1,12 @@
 import React from 'react';
 import Navigation from './Navigation/navigation.js'
 import FadeIn from './Transition/FadeInTransition';
+//noinspection JSUnresolvedVariable
+import MidtownGreenwayImage from '../img/midtown.png';
+//noinspection JSUnresolvedVariable
+import LetItDieImage from '../img/letitdie.png';
+import Preload from './Preload/PreloadImages';
+
 
 class App extends React.Component {
 
@@ -8,8 +14,8 @@ class App extends React.Component {
         this.setState({videoData: video});
     }
 
-    componentWillMount(){
-        this.setState({videoData:null});
+    componentWillMount() {
+        this.setState({videoData: null});
     }
 
     render() {
@@ -20,7 +26,9 @@ class App extends React.Component {
                     <Navigation videoData={this.state.videoData}/>
                 </div>
             </div>
+            <Preload items={[MidtownGreenwayImage, LetItDieImage]}/>
         </FadeIn>
+
     }
 }
 

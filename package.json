@@ -18,8 +18,7 @@
     "url": "https://github.com/nlaffey/nick-laffey-videos/issues"
   },
   "homepage": "https://github.com/nlaffey/nick-laffey-videos#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
@@ -32,6 +31,7 @@
     "fancybox": "^3.0.0",
     "file-loader": "^0.9.0",
     "image-webpack-loader": "^2.0.0",
+    "jest": "^15.1.1",
     "jquery": "^3.1.0",
     "node-sass": "^3.10.0",
     "react": "^15.3.1",
