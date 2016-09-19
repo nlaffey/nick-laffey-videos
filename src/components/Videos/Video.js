@@ -1,22 +1,22 @@
 import React from 'react';
-import CenterImage from '../CenterImage';
-import $ from 'jquery';
+import CenterImage from '../CenterImage/CenterImage';
 import fancyBoxCustom from '../../js/fancyBoxCustom';
+import FadeInTransition from '../Transition/FadeInTransition';
+import playImg from '../../img/play.gif';
 
 class Video extends React.Component {
     componentDidMount() {
         fancyBoxCustom();
-        $('.vidtitle').fadeIn(2000);
     }
 
     render() {
-        return <div className="wrapper">
-
-            <div className="vidtitle-wrapper">
-                <a className="vidtitle fancybox-media" href={this.props.href}>{this.props.name.toUpperCase()}
-                    {/*TODO: Update play image to build location */}
-                    <br/><img className="play" src="src/img/play.gif"/> </a>
-            </div>
+        return <div>
+            <FadeInTransition>
+                <div className="vidtitle-wrapper">
+                    <a className="vidtitle fancybox-media" href={this.props.href}>{this.props.name.toUpperCase()}
+                        <br/><img className="play" src={playImg}/> </a>
+                </div>
+            </FadeInTransition>
             <CenterImage image={this.props.image} name={this.props.name}/>
             <div className="info"><b>{this.props.name.toUpperCase()}</b>
                 <br/>
@@ -30,3 +30,4 @@ class Video extends React.Component {
 }
 
 export default Video;
+

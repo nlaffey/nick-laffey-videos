@@ -7,9 +7,20 @@ import fancyBoxMediaPlugin from '../../node_modules/fancybox/dist/helpers/js/jqu
 fancyBox($);
 fancyBoxMediaPlugin($);
 
-export default function() {
+export default function () {
+
+    var styleId = 'fancybox-styles';
+
+    var addFancyBoxStyle = function () {
+        if ($('#' + styleId).length == 0) {
+            $('head').append('<style type="text/css" id="' + styleId + '">' + css + '</style>');
+        }
+    }
+
+
+
     $(document).ready(function () {
-        $('head').append('<style>' + css + '</style>');
+        addFancyBoxStyle();
         $('.fancybox-media').fancybox({
             openEffect: 'fade',
             closeEffect: 'fade',

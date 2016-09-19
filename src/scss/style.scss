@@ -1,6 +1,7 @@
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background-color: white;
+  color: black;
 }
 
 a{
@@ -8,15 +9,11 @@ a{
   text-decoration:none;
 }
 
-.letitdie.wrapper, .midtown.wrapper {
-  display: none;
-}
-
 .container {
   position: absolute;
   top: 50%;
-  margin-top: -365px;
   left: 50%;
+  margin-top: -365px;
   margin-left: -500px;
 }
 
@@ -33,30 +30,22 @@ a{
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .pic {
   position: absolute;
-  z-index: 10;
   top: 0;
   left: 0;
 }
 
 .vidtitle {
   font-size: 85px;
-  z-index: 14;
   position: relative;
   color: white;
-  display: none;
   cursor: pointer;
   text-decoration: none;
   text-shadow: 2px 2px #000000;
 
-}
-
-.letitdie.vidtitle {
-  left: 232px;
 }
 
 .play {
@@ -73,29 +62,10 @@ a{
 
 }
 
-a.wrapper {
-  &:after, &:before {
-    position: absolute;
-    width: 80%;
-    height: 40%;
-    left: 10%;
-    border-radius: 50%;
-    z-index: -1;
-    bottom: 0;
-    content: "";
-    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.4);
-  }
-}
-
 .info {
   position: absolute;
-  bottom: -75px;
   left: 393px;
   font-size: .7em;
-}
-
-.nick.info {
-  bottom: -52px;
 }
 
 .biotext {
@@ -165,7 +135,6 @@ a.wrapper {
 
 .email {
   font-size: 12px;
-  color: black;
   text-decoration: none;
   margin-top: 0;
   position: absolute;
@@ -176,33 +145,18 @@ a.wrapper {
   }
 }
 
-.facebook {
-  float: left;
-  left: -7px;
-  top: 55px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.facebook:hover {
-  border: 1px solid black;
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-
-}
-
-.footer {
-  font-size: 10px;
-  text-align: center;
-  top: 105px;
-  left: 320px;
-  position: absolute;
-}
-
 .vidtitle-wrapper {
   position: absolute;
   top: 300px;
   text-align: center;
   width:100%;
+  z-index:100;
+}
+
+.fadein-appear {
+  opacity: .1;
+  &.fadein-appear-active {
+    opacity: 1;
+    transition: opacity 1.2s ease-in;
+  }
 }

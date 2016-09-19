@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        'main': "./index.js",
+        'main': "./src/index.js",
     },
     output: {
         path: __dirname + "/build",
@@ -12,8 +12,12 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.html$/,
+                loader: 'file?name=[name].[ext]'
+            },
+            {
                 test: /\.scss$/,
-                loaders: ["style", "css", 'sass']
+                loaders: ["style", "css", 'resolve-url', 'sass?sourceMap']
             },
             {
                 test: /\.js$/,
@@ -29,10 +33,23 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
-                    'file?name=[path][name].[ext]',
+                    'file?name=img/[name].[ext]',
                     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NOD_ENV': JSON.stringify('production')
+            }
+        })
+    ]
 }
