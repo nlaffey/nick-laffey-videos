@@ -2,15 +2,22 @@ import React from 'react';
 import CenterImage from './CenterImage';
 import image from '../../img/mondo.jpg';
 
-class InitialImage extends React.Component{
-    render(){
+class HomeImage extends React.Component {
+
+    componentWillMount() {
+        this.props.updateVideoInfo(null);
+    }
+
+    render() {
         return <div>
-            <CenterImage image={image}/>
-                <div className="info"><b/>
-                    Select a video on the right
-                </div>
+            <div className="title-wrapper">
+                <span>Hi, select a video to the right.</span>
             </div>
+            <CenterImage image={image}/>
+        </div>
+
+
     }
 }
 
-export default InitialImage;
+export default HomeImage;

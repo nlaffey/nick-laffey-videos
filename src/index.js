@@ -14,6 +14,16 @@ import App from './components/App.js';
 import LetItDie from './components/Videos/letitdie'
 import MidtownGreenway from './components/Videos/midtowngreenway'
 import Home from './components/CenterImage/HomeImage';
+
+
+
+
+class AppWrapper extends React.Component{
+        render(){
+            return <App />
+        }
+}
+
 ReactDOM.render((<Router history={hashHistory} >
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
