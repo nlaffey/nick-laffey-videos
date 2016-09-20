@@ -3,8 +3,9 @@ import React from 'react';
 class VideoInfo extends React.Component {
 
     static toUpperCase(string) {
+        debugger;
         if (string) {
-            return VideoInfo.toUpperCase();
+            return string.toUpperCase();
         } else {
             return null;
         }
