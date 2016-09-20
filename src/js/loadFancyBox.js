@@ -11,14 +11,13 @@ export default function () {
 
     var styleId = 'fancybox-styles';
 
-    var addFancyBoxStyle = function () {
+    var addStyles = function () {
         if ($('#' + styleId).length == 0) {
             $('head').append('<style type="text/css" id="' + styleId + '">' + css + '</style>');
         }
     }
 
-    $(document).ready(function () {
-        addFancyBoxStyle();
+    var applyFancyBox = function () {
         $('.fancybox-media').fancybox({
             openEffect: 'fade',
             closeEffect: 'fade',
@@ -34,8 +33,13 @@ export default function () {
                 },
             }
         });
-    });
-};
+    };
 
+    $(document).ready(function () {
+        addStyles();
+        applyFancyBox();
+
+    });
+}
 
 

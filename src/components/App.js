@@ -6,18 +6,11 @@ import MidtownGreenwayImage from '../img/midtown.png';
 //noinspection JSUnresolvedVariable
 import LetItDieImage from '../img/letitdie.png';
 import PreloadImages from './Preload/PreloadImages';
-import loadFancyBox from '../js/loadFancyBox';
 
 class App extends React.Component {
 
     updateVideoInfo(video) {
         this.setState({videoData: video});
-    }
-
-    componentDidMount() {
-        // Pre-loading fancybox here. Ran into issues with Jest tests when it's loaded in the Video components.
-        // TODO: Review loading of fancyBox and Jest tests.
-        loadFancyBox();
     }
 
     componentWillMount() {
