@@ -1,0 +1,10 @@
+exports[`test renders correctly with image passed in 1`] = `
+<div>
+  <img
+    alt="Nick Laffey juggling"
+    className="center-image"
+    height="562"
+    src="mock_file_name"
+    width="960" />
+</div>
+`;

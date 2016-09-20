@@ -2,8 +2,9 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
+
 /*
-    Importing HTML only so it gets processed by Webpack and placed in the build folder.
+ Importing HTML only so it gets processed by Webpack and placed in the build folder.
  */
 //noinspection ES6UnusedImports,JSUnresolvedVariable
 import Html from './html/index.html';
@@ -17,7 +18,7 @@ import LetItDie from './components/Videos/letitdie'
 import MidtownGreenway from './components/Videos/midtowngreenway'
 import Home from './components/CenterImage/HomeImage';
 
-ReactDOM.render((<Router history={hashHistory} >
+ReactDOM.render((<Router history={hashHistory}>
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
         <Route path="home" component={Home}/>

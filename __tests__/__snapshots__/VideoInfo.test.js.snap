@@ -1,0 +1,49 @@
+exports[`test renders correctly 1 1`] = `
+<div
+  className="info">
+  <ul>
+    <li>
+      <strong />
+    </li>
+    <li>
+      April 2013
+    </li>
+    <li>
+      Shot in the Raring Building at the University of Minnesota
+    </li>
+    <li>
+      Video by 
+      Meagan Nouis
+    </li>
+    <li>
+      Music by 
+      Fiest
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`test renders correctly 2 1`] = `
+<div
+  className="info">
+  <ul>
+    <li>
+      <strong />
+    </li>
+    <li>
+      foobar
+    </li>
+    <li>
+      11111
+    </li>
+    <li>
+      Video by 
+      long entrylong entrylong entrylong entrylong entrylong entrylong entrylong entrylong entry
+    </li>
+    <li>
+      Music by 
+      
+    </li>
+  </ul>
+</div>
+`;

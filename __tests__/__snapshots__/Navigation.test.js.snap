@@ -1,0 +1,71 @@
+exports[`test renders correctly 1 1`] = `
+<div
+  className="nav">
+  <div
+    className="nav-left">
+    <div
+      className="nav-header">
+      <a
+        onClick={[Function bound handleClick]}
+        style={Object {}}>
+        NICK LAFFEY
+      </a>
+    </div>
+    <a
+      className="hover-bold"
+      href="mailto:nicklaffey@gmail.com">
+      NICKLAFFEY@GMAIL.COM
+    </a>
+  </div>
+  <div
+    className="nav-center">
+    <div
+      className="info">
+      <ul>
+        <li>
+          <strong />
+        </li>
+        <li>
+          April 2013
+        </li>
+        <li>
+          Shot in the Raring Building at the University of Minnesota
+        </li>
+        <li>
+          Video by 
+          Meagan Nouis
+        </li>
+        <li>
+          Music by 
+          Fiest
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="nav-right">
+    <div
+      className="nav-header">
+      VIDEOS
+    </div>
+    <ul>
+      <li
+        className="hover-bold">
+        <a
+          onClick={[Function bound handleClick]}
+          style={Object {}}>
+          MIDTOWN GREENWAY
+        </a>
+      </li>
+      <li
+        className="hover-bold">
+        <a
+          onClick={[Function bound handleClick]}
+          style={Object {}}>
+          LET IT DIE
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

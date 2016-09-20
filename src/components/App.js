@@ -6,7 +6,7 @@ import MidtownGreenwayImage from '../img/midtown.png';
 //noinspection JSUnresolvedVariable
 import LetItDieImage from '../img/letitdie.png';
 import Preload from './Preload/PreloadImages';
-
+import fancyBoxCustom from '../js/fancyBoxCustom';
 
 class App extends React.Component {
 
@@ -15,6 +15,7 @@ class App extends React.Component {
     }
 
     componentWillMount() {
+        fancyBoxCustom();
         this.setState({videoData: null});
     }
 

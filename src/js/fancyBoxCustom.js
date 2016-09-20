@@ -1,5 +1,5 @@
 import $ from '../../node_modules/jquery/dist/jquery.min';
-import css from '!css!resolve-url!sass?sourceMap!../../node_modules/fancybox/dist/scss/jquery.fancybox.scss';
+import css from '../../node_modules/fancybox/dist/scss/jquery.fancybox.scss';
 import fancyBox from '../../node_modules/fancybox/dist/js/jquery.fancybox.cjs';
 import fancyBoxMediaPlugin from '../../node_modules/fancybox/dist/helpers/js/jquery.fancybox-media.cjs';
 
@@ -16,7 +16,6 @@ export default function () {
             $('head').append('<style type="text/css" id="' + styleId + '">' + css + '</style>');
         }
     }
-
 
 
     $(document).ready(function () {

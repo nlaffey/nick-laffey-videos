@@ -1,13 +1,11 @@
 import React from 'react';
 import CenterImage from '../CenterImage/CenterImage';
-import fancyBoxCustom from '../../js/fancyBoxCustom';
 import FadeInTransition from '../Transition/FadeInTransition';
 import playImg from '../../img/play.gif';
 
 class Video extends React.Component {
 
     componentDidMount() {
-        fancyBoxCustom();
         this.props.updateVideoInfo(this.props.videoData);
     }
 
