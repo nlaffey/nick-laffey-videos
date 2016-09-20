@@ -3,11 +3,11 @@ import css from '../../node_modules/fancybox/dist/scss/jquery.fancybox.scss';
 import fancyBox from '../../node_modules/fancybox/dist/js/jquery.fancybox.cjs';
 import fancyBoxMediaPlugin from '../../node_modules/fancybox/dist/helpers/js/jquery.fancybox-media.cjs';
 
-// Instantiate the fancyBox jquery plugins.
-fancyBox($);
-fancyBoxMediaPlugin($);
 
 export default function () {
+    // Instantiate the fancyBox jquery plugins.
+    fancyBox($);
+    fancyBoxMediaPlugin($);
 
     var styleId = 'fancybox-styles';
 
@@ -16,7 +16,6 @@ export default function () {
             $('head').append('<style type="text/css" id="' + styleId + '">' + css + '</style>');
         }
     }
-
 
     $(document).ready(function () {
         addFancyBoxStyle();

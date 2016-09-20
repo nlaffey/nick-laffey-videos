@@ -5,8 +5,8 @@ import FadeIn from './Transition/FadeInTransition';
 import MidtownGreenwayImage from '../img/midtown.png';
 //noinspection JSUnresolvedVariable
 import LetItDieImage from '../img/letitdie.png';
-import Preload from './Preload/PreloadImages';
-import fancyBoxCustom from '../js/fancyBoxCustom';
+import PreloadImages from './Preload/PreloadImages';
+import loadFancyBox from '../js/loadFancyBox';
 
 class App extends React.Component {
 
@@ -14,8 +14,13 @@ class App extends React.Component {
         this.setState({videoData: video});
     }
 
+    componentDidMount() {
+        // Pre-loading fancybox here. Ran into issues with Jest tests when it's loaded in the Video components.
+        // TODO: Review loading of fancyBox and Jest tests.
+        loadFancyBox();
+    }
+
     componentWillMount() {
-        fancyBoxCustom();
         this.setState({videoData: null});
     }
 
@@ -27,7 +32,7 @@ class App extends React.Component {
                     <Navigation videoData={this.state.videoData}/>
                 </div>
             </div>
-            <Preload items={[MidtownGreenwayImage, LetItDieImage]}/>
+            <PreloadImages items={[MidtownGreenwayImage, LetItDieImage]}/>
         </FadeIn>
 
     }
